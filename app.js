@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://to-do-server-jd4c.onrender.com/api';
 let currentUserEmail = localStorage.getItem('userEmail') || '';
 let currentDate = new Date().toISOString().split('T')[0];
 
