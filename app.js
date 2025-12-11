@@ -189,7 +189,7 @@ function displayExpenses(expenses) {
         expensesList.innerHTML = expenses.map(expense => `
             <div class="expense-item flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200">
                 <div class="flex-1">
-                    <p class="font-semibold text-gray-800">$${expense.amount.toFixed(2)}</p>
+                    <p class="font-semibold text-gray-800">₹${expense.amount.toFixed(2)}</p>
                     ${expense.description ? `<p class="text-sm text-gray-600">${expense.description}</p>` : ''}
                 </div>
                 <button onclick="deleteExpense('${expense._id}')" 
@@ -200,7 +200,7 @@ function displayExpenses(expenses) {
         `).join('');
     }
     
-    document.getElementById('totalExpense').textContent = `$${total.toFixed(2)}`;
+    document.getElementById('totalExpense').textContent = `₹${total.toFixed(2)}`;
 }
 
 async function addExpense() {
@@ -296,7 +296,7 @@ function displayDailyReport(report, date) {
                 </div>
                 <div class="bg-white p-4 rounded-lg shadow">
                     <p class="text-sm text-gray-600">Day's Spend</p>
-                    <p class="text-2xl font-bold text-green-600">$${report.daySpend.toFixed(2)}</p>
+                    <p class="text-2xl font-bold text-green-600">₹${report.daySpend.toFixed(2)}</p>
                 </div>
             </div>
         </div>
@@ -331,11 +331,11 @@ function displayMonthlyReport(report) {
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 <div class="bg-white p-5 rounded-lg shadow">
                     <p class="text-sm text-gray-600 mb-2">Total Monthly Spend</p>
-                    <p class="text-3xl font-bold text-green-600">$${report.totalSpend.toFixed(2)}</p>
+                    <p class="text-3xl font-bold text-green-600">₹${report.totalSpend.toFixed(2)}</p>
                 </div>
                 <div class="bg-white p-5 rounded-lg shadow">
                     <p class="text-sm text-gray-600 mb-2">Average Daily Spend</p>
-                    <p class="text-3xl font-bold text-blue-600">$${report.averageSpend.toFixed(2)}</p>
+                    <p class="text-3xl font-bold text-blue-600">₹${report.averageSpend.toFixed(2)}</p>
                 </div>
                 <div class="bg-white p-5 rounded-lg shadow">
                     <p class="text-sm text-gray-600 mb-2">Total Completed Tasks</p>
